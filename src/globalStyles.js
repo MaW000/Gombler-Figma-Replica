@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
   --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
   
-  --color-bg: #E5E5E5;
+  --color-bg: #fff;
   --color-footer : #031B34;
   --color-blog: #042c54;
   --color-text: #81AFDD;
@@ -25,6 +25,13 @@ const GlobalStyle = createGlobalStyle`
   scroll-behavior: smooth;
 }
 
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
   background: var(--color-bg);
 }
@@ -33,6 +40,11 @@ a {
   color: unset;
   text-decoration: none;
 }
+.section__padding {
+  padding: 10rem 12rem;
+}
+
+
 `
 
 export default GlobalStyle
